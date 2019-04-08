@@ -1,0 +1,50 @@
+/* pages/scroll/scroll.wxss */
+
+page {
+  padding-top: 100rpx;
+}
+
+.scroll-box {
+  width: 500rpx;
+  height: 1000rpx;
+  margin: 0rpx auto;
+  background: #333;
+  overflow: hidden;
+  position: relative;
+}
+
+scroll-view {
+  width: 530rpx;
+  height: 100%;
+}
+
+.scroll-inner {
+  width: 500rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.lis {
+  padding: 30rpx;
+  border: 1rox solid #ccc;
+  text-align: center;
+}
+
+.barbox {
+  width: 10rpx;
+  height: 100%;
+  position: absolute;
+  right: 2rpx;
+  /* background: #ccc; */
+  top: 2rpx;
+}
+
+.bar {
+  width: 8rpx;
+  position: absolute;
+  top: 0;
+  height: 60rpx;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.2);
+  /* background: yellow; */
+}

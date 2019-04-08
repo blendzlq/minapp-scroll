@@ -1,0 +1,12 @@
+<!--pages/scroll/scroll.wxml-->
+
+<view class='scroll-box'>
+  <scroll-view id='scroll' scrollY bindscroll="bindscroll">
+    <view class='scroll-inner'>
+      <view class='lis' wx:for="213123123123123123213123123123123123213123123123123123213123123123123123" wx:key="{{item}}">{{item}}</view>
+    </view>
+  </scroll-view>
+  <view class='barbox' wx:if="{{scrollBarShow}}">
+    <view class='bar' wx:if="{{barShow}}" style='height:{{barHt}}px;top:{{barTop}}px'></view>
+  </view>
+</view>
