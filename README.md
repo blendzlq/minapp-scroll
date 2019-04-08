@@ -21,7 +21,36 @@
 ## 效果图片
 <img src="./1.jpg">
 
-## 只是加了一个状态
+## 只是加了一个状态  
+
+ 对应的 barHt  也要动态获取了
+``` bash
+   scrollInit() {
+    wx.createSelectorQuery().select('#scroll').boundingClientRect((rect) => {
+      this.setData({
+        scrollBox: rect
+      })
+    }).exec()
+    wx.createSelectorQuery().select('#bar').boundingClientRect((rect) => {
+      this.setData({
+        barHt: rect.height
+      })
+    }).exec()
+    
+  },
+  bindscroll: function(e) {
+    console.log(e)
+    let scrollBound = this.data.scrollBox
+    let scrollHeight = e.detail.scrollHeight
+    let scrollTop = e.detail.scrollTop
+    //滚动条bar高度根据显示区域占内容区域的比例显示
+    let barHt = this.data.barHt
+    let barTop = (scrollTop / (scrollHeight - scrollBound.height) * (scrollBound.height - barHt));
+    this.setData({
+      barTop: barTop
+    })
+  },
+```
 <img src="./2.jpg">
 <img src="./3.jpg">
 
